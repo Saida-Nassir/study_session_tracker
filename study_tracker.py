@@ -66,9 +66,6 @@ def show_statistics():
     print("\nBreakdown by Subject:")
     for subject, minutes in subject_totals.items():
         print(f" - {subject}:{minutes} mins")
-        print("\nMinutes per subject:")
-    for subject, minutes in subject_totals.items():
-        print(f"{subject}:{minutes} minutes")
         
     print("-" * 30)
     # Optimization Feedback System
