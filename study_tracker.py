@@ -14,7 +14,8 @@ def add_session():
                 continue
             # New Optimizer Metric: Focus Level (1-10)
             focus = int(input("Enter focus level ( 1 =Distracted, 10=Peak Flow): "))
-             if not("Error: Focus level must be between 1 and 10.")
+            if not(1 <= focus <= 10):
+                print("Error: Focus level must be between 1 and 10.")
                 continue
             break
         except ValueError:
@@ -35,7 +36,7 @@ def show_statistics():
         print("No study sessions recorded yet.\n")
         return
 
-    total_minutes = 0
+    total_raw_minutes = 0
     total_weighted_score = 0
     subject_totals = {}
 
@@ -62,10 +63,10 @@ def show_statistics():
     print(f"Adjusted Efficiency Score: {total_weighted_score:.1f}units")
     print(f"Primary Focus:{most_studied_subject}")
 
-    print("\nBreamdown by Subject:")
+    print("\nBreakdown by Subject:")
     for subject, minutes in subject_totals.items():
-    print(f" - {subject}:{minutes} mins")
-    print("\nMinutes per subject:")
+        print(f" - {subject}:{minutes} mins")
+        print("\nMinutes per subject:")
     for subject, minutes in subject_totals.items():
         print(f"{subject}:{minutes} minutes")
         
