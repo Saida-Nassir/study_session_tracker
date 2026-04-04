@@ -78,6 +78,7 @@ def show_statistics():
     if efficiency_ratio < 0.7 :
         print("OPTIMIZER ADVICE: Low focus-to-duration ratio detected.")
         print(" Recommendation: Implement a physical reset or interval-based sessions(Pomodoro).")
+    else:
         print("Status: Current cognitive load is being managed effectively.")
     print("-" * 30 + "\n")
 
