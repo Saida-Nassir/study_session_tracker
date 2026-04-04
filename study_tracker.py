@@ -13,8 +13,8 @@ def add_session():
                 print("Error: Please enter a positive number.")
                 continue
             # New Optimizer Metric: Focus Level (1-10)
-            focus = int(input("Enter focus level ( 1 =Distracted, 10=Peak Flow): "))
-            if not(1 <= focus <= 10):
+            focus = int(input("Enter focus level ( 1 = Distracted, 10 = Peak Flow): "))
+            if not (1 <= focus <= 10):
                 print("Error: Focus level must be between 1 and 10.")
                 continue
             break
@@ -55,26 +55,26 @@ def show_statistics():
         else:
             subject_totals[subject] = minutes
     # Identify most time-intensive subject
-    most_studied_subject = max(subject_totals,key=subject_totals.get)
+    most_studied_subject = max(subject_totals, key=subject_totals.get)
 
     print("-" * 30)
     print("ANALYTICS SUMMARY")
-    print(f"Total Raw Duration:{total_raw_minutes} minutes")
-    print(f"Adjusted Efficiency Score: {total_weighted_score:.1f}units")
-    print(f"Primary Focus:{most_studied_subject}")
+    print(f"Total Raw Duration: {total_raw_minutes} minutes")
+    print(f"Adjusted Efficiency Score: {total_weighted_score:.1f} units")
+    print(f"Primary Focus: {most_studied_subject}")
 
     print("\nBreakdown by Subject:")
     for subject, minutes in subject_totals.items():
-        print(f" - {subject}:{minutes} mins")
+        print(f" - {subject}: {minutes} mins")
         
     print("-" * 30)
     # Optimization Feedback System
     # Compares actual minutes vs. quality of focus
     efficiency_ratio = total_weighted_score / total_raw_minutes
 
-    if efficiency_ratio < 0.7 :
+    if efficiency_ratio < 0.7:
         print("OPTIMIZER ADVICE: Low focus-to-duration ratio detected.")
-        print(" Recommendation: Implement a physical reset or interval-based sessions(Pomodoro).")
+        print(" Recommendation: Implement a physical reset or interval-based sessions (Pomodoro).")
     else:
         print("Status: Current cognitive load is being managed effectively.")
     print("-" * 30 + "\n")
@@ -82,10 +82,10 @@ def show_statistics():
 def menu():
     """Main application interface."""
     while True:
-            print("===Study Tracker Optimizer")
-            print("1.Log study session")
-            print("2.View optimization statistics")
-            print("3.Exit")
+            print("=== Study Tracker Optimizer")
+            print("1. Log study session")
+            print("2. View optimization statistics")
+            print("3. Exit")
 
             choice = input("Choose an option: ").strip()
 
@@ -97,7 +97,7 @@ def menu():
                 print("Progress saved. Goodbye!")
                 break
             else:
-                print("invalid choice. Try again.\n")
+                print("Invalid choice. Try again.\n")
 
 if __name__ == "__main__":
     menu()
