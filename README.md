@@ -2,7 +2,7 @@
 
 ​A Python tool that doesn't just track time, but also focus. I built this to help students see if they are actually being productive or just "busy."
 
-​ Key Features
+​ Key Features: 
 ​Focus Metric: Rate your focus from 1–10 for every session.
 ​Efficiency Score: Uses a weighted formula to calculate your actual cognitive output.
 ​Smart Advice: Tells you when to take a break (Pomodoro) if your focus-to-time ratio drops too low.
